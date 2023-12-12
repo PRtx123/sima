@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+
 import '../constants.dart';
 import '../main.dart';
 
@@ -13,12 +14,14 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
 
   bool showPassword = true;
-  bool changedata = false;
+
+  Color primaryColor = Color(0xff18203d);
+  Color secondaryColor = Color(0xff232c51);
+  Color logoGreen = Color(0xff25bcbb);
+
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  String FIO = "Сидоров Вадим Алексеевич";
-  String email = "sidorovvadim@gmail.com";
 
 
   @override
@@ -51,6 +54,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       ),
+
       body: Container(
         padding: EdgeInsets.only(left: 16, top: 10, right: 16),
         child: GestureDetector(
@@ -109,8 +113,8 @@ class _ProfilePageState extends State<ProfilePage> {
               SizedBox(
                 height: 35,
               ),
-              buildTextField(nameController,"ФИО", FIO, false),
-              buildTextField(emailController,"E-mail", email, false),
+              buildTextField(nameController,"ФИО", "Сидоров Вадим Алексеевич", false),
+              buildTextField(emailController,"E-mail", "sidorovvadim@gmail.com", false),
               buildTextField(passwordController,"Пароль", "********", true),
               SizedBox(
                 height: 35,
@@ -119,7 +123,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   OutlineButton(
-                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 50),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
                     onPressed: () {
@@ -138,16 +142,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   RaisedButton(
                     onPressed: () {
                       setState(() {
-                          FIO = nameController.text;
-                          email = emailController.text;
-                          nameController.clear();
-                          emailController.clear();
-                          passwordController.clear();
+                        nameController.text = '';
+                        emailController.text = '';
+                        passwordController.text = '';
                       });
                     },
                     //color: logoGreen,
                     color: Blue,
-                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    padding: EdgeInsets.symmetric(horizontal: 50),
                     elevation: 2,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5)),
@@ -161,7 +163,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ],
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
               Center(child: Text('174987', style: TextStyle(color: Color.fromRGBO(0, 117, 219, 0.5), fontWeight: FontWeight.bold, fontSize: 25),))
             ],
           ),
@@ -169,7 +171,6 @@ class _ProfilePageState extends State<ProfilePage> {
       ),
     );
   }
-
 
   Widget buildTextField(
   TextEditingController controller,String labelText, String placeholder, bool isPasswordTextField) {
@@ -211,6 +212,5 @@ class _ProfilePageState extends State<ProfilePage> {
             )),
       ),
     );
-
   }
 }

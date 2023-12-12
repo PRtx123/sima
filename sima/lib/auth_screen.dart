@@ -1,7 +1,11 @@
 import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:sima/constants.dart';
 import 'package:sima/screens/adminpanel.dart';
+import 'package:sima/screens/login.dart';
+import 'package:sima/screens/nuv.dart';
+import 'package:sima/screens/testreg.dart';
 import 'package:sima/try/testt.dart';
 import 'package:sima/widgets/login_form.dart';
 import 'package:sima/widgets/sign_up_form.dart';

@@ -1,8 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sima/screens/selection.dart';
 import 'package:sima/try/testt.dart';
-import '../constants.dart';
 
+import '../auth_screen.dart';
+import '../constants.dart';
+import '../main.dart';
+import 'login.dart';
 
 class AdminPanel extends StatefulWidget {
   const AdminPanel({Key? key}) : super(key: key);
@@ -12,6 +16,9 @@ class AdminPanel extends StatefulWidget {
 }
 
 class _AdminPanelState extends State<AdminPanel> {
+  Color primaryColor = Color(0xff18203d);
+  Color secondaryColor = Color(0xff232c51);
+  Color logoGreen = Color(0xff25bcbb);
 
   TextEditingController nameController = TextEditingController();
   TextEditingController secondController = TextEditingController();
@@ -25,6 +32,7 @@ class _AdminPanelState extends State<AdminPanel> {
       "secondname": secondController.text,
       "code" : codeController.text,
     };
+
 
   }
 
@@ -47,6 +55,9 @@ class _AdminPanelState extends State<AdminPanel> {
       ),
     );
   }
+
+
+
 
   @override
   Widget build(BuildContext context) {

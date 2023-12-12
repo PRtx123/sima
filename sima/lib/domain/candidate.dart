@@ -1,5 +1,6 @@
 class Candidate{
   String FIO;
+  //String secondname;
   String date, Image;
   String index;
 

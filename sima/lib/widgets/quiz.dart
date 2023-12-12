@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sima/try/testt.dart';
+
+import '../constants.dart';
 import 'answer.dart';
 
 
@@ -20,14 +23,13 @@ class _QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 30,),
         Container(
-          width: 500,
+          width: 300,
           child: Text(
             widget.questionData.questions[widget.index].title,
-            style: TextStyle(color: Colors.black, fontSize: 20.0), textAlign: TextAlign.justify,), //18 было
+            style: TextStyle(color: Colors.black, fontSize: 18.0),),
         ),
-        SizedBox(height: 50,),
+
         ...widget.questionData.questions[widget.index].answer.map(
                 (value) => Answer(title: value['answer'], onChangeAnswer: widget.onChangeAnswer,)
         ).toList(),

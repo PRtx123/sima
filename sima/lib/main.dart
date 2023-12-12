@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:sima/screens/about.dart';
 import 'package:sima/screens/login.dart';
 import 'package:sima/screens/testreg.dart';
@@ -8,9 +7,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(MaterialApp(home: HomePage(),));
+  //runApp(MaterialApp(home: Profile(),));
 }
 
 class HomePage extends StatefulWidget {
@@ -22,15 +20,20 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  List carouselitems = ['Сервис тестирования кандидатов','Подбор кандидатов в команду','Подробный отчет характеристик кандидата'];
+  Color primaryColor = Color(0xff18203d);
+  Color secondaryColor = Color(0xff232c51);
+  Color logoGreen = Color(0xff25bcbb);
+
+  List carouselitems = ['Самое лучшее приложение в мире','Example1','Example2'];
   final frstcontroller = CarouselController();
   int activeIndex = 0;
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //backgroundColor: primaryColor,
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white,  //меняем цвет фона на белый
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 40),
         child: Column(
@@ -83,7 +86,9 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => LoginScreen()));
-
+                    //MaterialPageRoute(builder: (_) => AnalyticsView()));
+                    //MaterialPageRoute(builder: (_) => SelectionScreen()));
+                    //MaterialPageRoute(builder: (_) => AuthScreen()));
               },
               //color: logoGreen,
               color: Blue,

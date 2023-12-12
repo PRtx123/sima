@@ -29,12 +29,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   font_awesome_flutter:
+  websafe_svg:
   get:
+  flutter_email_sender:
   carousel_slider:
   smooth_page_indicator:
   flutter_echarts:
   flutter_svg:
-  grouped_list:
 
 dev_dependencies:
   flutter_test:

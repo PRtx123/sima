@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../main.dart';
 import 'adminpanel.dart';
+import 'analytics.dart';
 import 'nuv.dart';
 import 'package:sima/constants.dart';
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -16,7 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController passwordController = TextEditingController();
 
   List auth=['test@gmail.com','test@yandex.ru'];
-  List pass=['111111','222222'];
+  Color primaryColor = Color(0xff18203d);
+  Color secondaryColor = Color(0xff232c51);
+  Color logoGreen = Color(0xff25bcbb);
 
   @override
   Widget build(BuildContext context) {
@@ -43,15 +50,21 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(height: 20),
           //_buildTextField(passwordController,'Password',Icons.lock),
           _buildTextField(passwordController,Icons.lock,'Пароль',true),
-          Padding(padding: EdgeInsets.only(left: 410),child: TextButton(child: Text("Забыли пароль?", style: TextStyle(fontSize: 12,color: Colors.black),),onPressed: (){},),),
+          Padding(padding: EdgeInsets.only(left: 190),child: TextButton(child: Text("Забыли пароль?", style: TextStyle(fontSize: 14,color: Colors.white),),onPressed: (){},),),
           //SizedBox(height: 20),
           MaterialButton(
             elevation: 0,
             minWidth: double.maxFinite,
             height: 50,
             onPressed: () async {
+              if(nameController.text=="admin" && passwordController.text=="admin") {
+                Navigator.push(context,
+                    //MaterialPageRoute(builder: (_) => LoginScreen()));
+                    MaterialPageRoute(builder: (_) => AdminPanel()));
+              }
+              else{
                 if(nameController.text != "" && passwordController.text != "") {
-                  if(auth.contains(nameController.text) && pass.contains(passwordController.text)) {
+                  if(auth.contains(nameController.text)) {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => NuvBar()));
                   }
@@ -62,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 else{
                   _showMessageDialog(context,'Заполните пустые поля');
                 }
+              }
             },
             //color: logoGreen,
             color: Blue,

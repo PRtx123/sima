@@ -20,73 +20,138 @@ class QuestionData{
         ]
     ),
     Question(
-        title: 'Нравится ли Вам работа, когда только Вы один ответственны за нее?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Предпочитаете ли Вы деятельность, которую нужно выполнять долго и точно, той, которая не требует большой кропотливости и делается быстро?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Вы очень общительный человек?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Часто ли Вам жизнь кажется тяжелой?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Говорите ли Вы людям свое мнение о них прямо в глаза?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Легко ли Вы впадаете в гнев?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Часто ли у Вас резко меняется настроение от состояния безграничного ликования до отвращения к жизни, к себе?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Являетесь ли вы обычно центром внимания в обществе, в компании?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: 'Стремитесь ли вы всегда считаться в числе лучших работников?',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
     Question(
-        title: ' Если по отношению к Вам несправедливо поступили, Вы обычно считаете нужным энергично отстаивать свои интересы',
+        title: 'Question2',
         answer: [
-          {'answer' : 'Да'},
-          {'answer' : 'Нет'},
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
+        ]
+    ),
+    Question(
+        title: 'Question2',
+        answer: [
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
+        ]
+    ),
+    Question(
+        title: 'Question2',
+        answer: [
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
+        ]
+    ),
+    Question(
+        title: 'Question2',
+        answer: [
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
+        ]
+    ),
+    Question(
+        title: 'Question2',
+        answer: [
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
+        ]
+    ),
+    Question(
+        title: 'Question2',
+        answer: [
+          {'answer' : 'Answer1'},
+          {'answer' : 'Answer2'},
+          {'answer' : 'Answer3'},
+          {'answer' : 'Answer!'},
         ]
     ),
   ];

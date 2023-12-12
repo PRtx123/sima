@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sima/constants.dart';
 import 'package:sima/domain/candidate.dart';
 import 'package:flutter_echarts/flutter_echarts.dart';
+import 'package:sima/screens/analytics.dart';
+
 import 'nuv.dart';
 
 class CandidateInfo extends StatelessWidget {
@@ -32,7 +35,7 @@ class CandidateInfo extends StatelessWidget {
       body: Container(
         child: Column(
           children: [
-            Center(child: Text("Рекомендация по командам", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 19),),),
+            Center(child: Text("Рекомендация по командам", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 25),),),
             Container(
               child: Center(
                 child: Echarts(
@@ -61,13 +64,9 @@ class CandidateInfo extends StatelessWidget {
               width: 800,
               height: 250,
             ),
-            Center(child: Text("Перечень сравнительных характеристик", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 19),),),
+            Center(child: Text("Перечень сравнительных характеристик", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold,fontSize: 25),),),
             Container(
               //padding: EdgeInsets.only(left: 30),
-              //legend: { кнопки снизу графика
-                //orient: 'horizontal',
-                //bottom: 'bottom'
-              //},
               child: Center(
                 child: Echarts(
                   option: '''
@@ -75,9 +74,13 @@ class CandidateInfo extends StatelessWidget {
                      title: {
                               text: '',
                               left: 'center'
-                            },                                   
+                            },
                             tooltip: {
                               trigger: 'item'
+                            },
+                            legend: {
+                              orient: 'horizontal',
+                              bottom: 'bottom'
                             },
                             series: [
                               {
@@ -92,10 +95,7 @@ class CandidateInfo extends StatelessWidget {
                                   { value: 0.2, name: 'Демонстративность' },
                                   { value: 0.7, name: 'Застревание' },
                                   { value: 0.3, name: 'Педантичность' },
-                                  { value: 0.45, name: 'Тревожность' },
-                                  { value: 0.40, name: 'Возбудимость' },
-                                  { value: 0.18, name: 'Экзальтированность'},
-                                  { value: 0.11, name: 'Ложь' }
+                                  { value: 0.45, name: 'Тревожность' }
                                 ],
                                 emphasis: {
                                   itemStyle: {

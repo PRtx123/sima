@@ -16,6 +16,10 @@ class TestQuiz extends StatefulWidget {
 
 class _TestQuizState extends State<TestQuiz> {
 
+  Color primaryColor = Color(0xff18203d);
+  Color secondaryColor = Color(0xff232c51);
+  Color logoGreen = Color(0xff25bcbb);
+
   final QuestionData data = QuestionData();
   int _countResult = 0;
   int _questionIndex = 0;
@@ -39,6 +43,7 @@ class _TestQuizState extends State<TestQuiz> {
     }
     );
   }
+
   //void _backToPage(){
     //setState(() {
       //if(_countResult>0 && _questionIndex >0) {
@@ -47,6 +52,8 @@ class _TestQuizState extends State<TestQuiz> {
       //}
     //});
   //}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
